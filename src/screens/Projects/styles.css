@@ -96,6 +96,7 @@
 
   .store-icon-container {
     width: 60%;
+    justify-content: center;
   }
 
   .project-container {
