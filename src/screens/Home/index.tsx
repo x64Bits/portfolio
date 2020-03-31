@@ -49,18 +49,36 @@ const IndexPage: FC = () => {
               error quod?
             </p>
             <div className="flex flex-row justify-end px-8 social-icon-container">
-              <LinkedInIcon
-                title="LinkedIn Link"
-                className="social-icon px-2 overflow-visible"
-              />
-              <GithubIcon
-                title="Github Link"
-                className="social-icon px-2 overflow-visible"
-              />
-              <TwitterIcon
-                title="Twitter Link"
-                className="social-icon px-2 overflow-visible"
-              />
+              <a
+                href="https://www.linkedin.com/in/ignacio-zsabo/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon
+                  title="LinkedIn Link"
+                  className="social-icon px-2 overflow-visible"
+                />
+              </a>
+              <a
+                href="https://github.com/x64Bits"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GithubIcon
+                  title="Github Link"
+                  className="social-icon px-2 overflow-visible"
+                />
+              </a>
+              <a
+                href="https://twitter.com/SpaceForgerDev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterIcon
+                  title="Twitter Link"
+                  className="social-icon px-2 overflow-visible"
+                />
+              </a>
             </div>
           </div>
         </div>
