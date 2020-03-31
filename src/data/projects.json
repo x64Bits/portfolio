@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "jandup-client",
+    "title": "JandUp - Client",
+    "subtitle": "Your Perfect snowbud",
+    "storeInfo": [{ "platform": "android", "url": "" }],
+    "icons": ["jandup-client_bddn77", "jandup-operator_s4i5ec"],
+    "technologies": [
+      "react-native",
+      "expo",
+      "adonis",
+      "javascript",
+      "vue",
+      "mysql",
+      "redux"
+    ],
+    "images": [
+      "https://res.cloudinary.com/jandup/image/upload/v1585625007/portfolio/showcases/app/jandup_gonogx.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585552346/portfolio/showcases/web/jandup-signup_l8hdzg.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585552342/portfolio/showcases/web/jandup-admin-categories_ltcimj.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585552337/portfolio/showcases/web/jandup-home_qpqjfz.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585552337/portfolio/showcases/web/jandup-modal_twypnc.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585552322/portfolio/showcases/web/jandup-payment-method_znjxmm.png"
+    ]
+  }
+]

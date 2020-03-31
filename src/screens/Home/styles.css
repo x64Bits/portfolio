@@ -1,0 +1,124 @@
+.dark-body {
+  background-color: #000;
+}
+
+.light-body {
+  background-color: #fff;
+}
+
+.home-container {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.portfolio-button-container {
+  position: absolute;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  overflow: visible;
+}
+
+.portfolio-button-container:hover > .portfolio-button-shadow {
+  opacity: 0.8;
+  top: 0.4rem;
+  transition: 0.3s;
+}
+
+.portfolio-button-container:hover > .portfolio-button {
+  /* margin-top: -0.3rem; */
+  transform: translateY(-0.3rem);
+  transition: 0.2s;
+}
+
+.portfolio-button {
+  position: relative;
+  background-image: linear-gradient(to right, #2575fc, #6a11cb);
+  color: #fff;
+  padding: 2.5rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.portfolio-button-shadow {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background-image: linear-gradient(to right, #2575fc, #6a11cb);
+  top: 0.2rem;
+  border-radius: 0.5rem;
+  filter: blur(8px);
+  opacity: 0.5;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.portfolio-link:active {
+  border: 0px solid transparent;
+}
+
+#anim {
+  cursor: pointer;
+  height: 37px;
+  width: 85px;
+  border-radius: 999px;
+  transition: all 0.25s linear;
+}
+
+#anim:hover {
+  box-shadow: 0px 0px 7px 0px rgba(106, 17, 203, 0.18);
+  transition: all 0.25s linear;
+}
+
+.avatar-container {
+  align-self: center;
+}
+
+.avatar {
+  height: 40vh;
+}
+
+.toggle-container {
+  overflow-y: auto;
+}
+
+.description {
+  font-size: 2.5vh;
+}
+
+.social-icon {
+  cursor: pointer;
+  border-radius: 999px;
+  transition: all 0.25s linear;
+}
+
+.social-icon:hover {
+  box-shadow: 0px 0px 7px 0px rgba(106, 17, 203, 0.18);
+  transition: all 0.25s linear;
+}
+
+@media (max-width: 650px) {
+  .home-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .toggle-container {
+    overflow-y: visible !important;
+    margin-bottom: 10vh;
+  }
+
+  .side-preview {
+    height: 100%;
+  }
+
+  .side-preview-container {
+    height: 100vh;
+  }
+}

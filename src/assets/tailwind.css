@@ -1,0 +1,41 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@screen dark-mode {
+  .home-container {
+    @apply bg-black;
+  }
+}
+
+.light-container {
+  transition: all 0.25s ease-in-out;
+  @apply bg-white;
+  @apply text-black;
+  @apply fill-light !important;
+}
+
+.dark-container {
+  transition: all 0.25s ease-in-out;
+  @apply bg-black;
+  @apply text-white;
+  @apply fill-dark !important;
+}
+
+.light-container .social-icon g {
+  transition: all 0.25s linear;
+  filter: invert(1);
+  fill: #000;
+}
+
+.dark-container .social-icon g {
+  transition: all 0.25s linear;
+  fill: #fff;
+}
+
+body,
+html {
+  height: 100%;
+}

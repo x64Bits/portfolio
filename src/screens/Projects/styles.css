@@ -1,0 +1,99 @@
+.dark-body {
+  background-color: #000;
+}
+
+.light-body {
+  background-color: #fff;
+}
+
+.project-container {
+  margin-bottom: 1rem;
+}
+
+.carousel-item {
+  height: 65vh;
+}
+
+.carousel-arrow {
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.25s linear;
+  margin: 0.5rem;
+}
+
+.carousel-arrow:hover {
+  box-shadow: 0px 4px 8px 0px rgba(37, 117, 252, 0.35);
+  transition: all 0.25s linear;
+  transform: translateY(-0.25rem);
+}
+
+.app-icon-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.app-icon {
+  width: 6rem;
+  border-radius: 1rem;
+}
+
+.shadow-app-icon-container {
+  position: absolute;
+  top: 2.8em;
+  opacity: 0.9;
+}
+
+.shadow-app-icon {
+  width: 4rem;
+  z-index: 1;
+  filter: blur(1rem);
+}
+
+.badge {
+  width: 14rem;
+}
+
+.tech-icon {
+  width: 4rem;
+  /* display: flex; */
+  /* flex-basis: 30%; */
+}
+
+.store-icon-container {
+  display: flex;
+  align-self: center;
+  width: 65%;
+}
+
+.store-icon {
+  object-fit: contain;
+}
+
+@media (max-width: 960px) {
+  .carousel-item {
+    height: 35vh;
+    object-fit: cover;
+  }
+  .screen-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-container {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .meta-info-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .store-icon-container {
+    width: 40%;
+  }
+}
