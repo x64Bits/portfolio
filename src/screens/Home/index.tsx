@@ -48,7 +48,7 @@ const IndexPage: FC = () => {
               mollitia, ab obcaecati pariatur fuga. Fugit ad eligendi voluptatum
               error quod?
             </p>
-            <div className="flex flex-row justify-end px-8">
+            <div className="flex flex-row justify-end px-8 social-icon-container">
               <LinkedInIcon
                 title="LinkedIn Link"
                 className="social-icon px-2 overflow-visible"

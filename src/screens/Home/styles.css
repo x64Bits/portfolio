@@ -103,7 +103,7 @@
   transition: all 0.25s linear;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 720px) {
   .home-container {
     display: flex;
     flex-direction: column-reverse;
@@ -120,5 +120,22 @@
 
   .side-preview-container {
     height: 100vh;
+  }
+
+  .social-icon-container {
+    justify-content: center;
+  }
+
+  .social-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .description {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
