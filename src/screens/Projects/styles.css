@@ -7,7 +7,7 @@
 }
 
 .project-container {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .carousel-item {
@@ -56,8 +56,6 @@
 
 .tech-icon {
   width: 4rem;
-  /* display: flex; */
-  /* flex-basis: 30%; */
 }
 
 .store-icon-container {
@@ -68,6 +66,9 @@
 
 .store-icon {
   object-fit: contain;
+}
+
+.app-container {
 }
 
 @media (max-width: 960px) {
@@ -81,7 +82,7 @@
 }
 
 @media (max-width: 720px) {
-  .project-container {
+  .app-container {
     flex-direction: column;
     padding-bottom: 0;
   }
@@ -94,6 +95,15 @@
   }
 
   .store-icon-container {
-    width: 40%;
+    width: 60%;
+  }
+
+  .project-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .carousel-arrow {
+    display: none;
   }
 }

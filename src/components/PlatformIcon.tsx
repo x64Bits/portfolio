@@ -25,12 +25,20 @@ const PlatformIcon: React.FC<Props> = ({ platform, classes, url }) => {
 
   return (
     <a
-      href={url}
-      target="_blank"
+      href={url === "" ? "#" : url}
+      target={url === "" ? "" : "_self"}
       rel="noopener noreferrer"
       className="flex self-center store-icon-container"
+      style={{
+        cursor: url === "" ? "default" : "pointer"
+      }}
     >
-      <img className={classes} src={uri} alt={`${platform}-icon`} />
+      <img
+        className={classes}
+        src={uri}
+        alt={`${platform}-icon`}
+        style={{ filter: url === "" ? "grayscale(100%)" : "unset" }}
+      />
     </a>
   );
 };

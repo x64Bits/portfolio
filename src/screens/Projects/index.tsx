@@ -11,7 +11,7 @@ const SecondPage: React.FC = () => {
   return (
     <div
       id="test-container"
-      className={`overflow-visible px-8 screen-container ${
+      className={`overflow-visible screen-container ${
         toggleModeSave ? "dark-container" : "light-container"
       }`}
     >

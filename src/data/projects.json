@@ -1,10 +1,19 @@
 [
   {
-    "slug": "jandup-client",
-    "title": "JandUp - Client",
-    "subtitle": "Your Perfect snowbud",
-    "storeInfo": [{ "platform": "android", "url": "" }],
-    "icons": ["jandup-client_bddn77", "jandup-operator_s4i5ec"],
+    "apps": [
+      {
+        "slug": "jandup-client",
+        "title": "JandUp - Client",
+        "subtitle": "Many offers at your fingertips",
+        "storeInfo": [{ "platform": "android", "url": "" }]
+      },
+      {
+        "slug": "jandup-operator",
+        "title": "JandUp - Operator",
+        "subtitle": "Many offers at your fingertips",
+        "storeInfo": [{ "platform": "android", "url": "" }]
+      }
+    ],
     "technologies": [
       "react-native",
       "expo",
@@ -21,6 +30,73 @@
       "https://res.cloudinary.com/jandup/image/upload/v1585552337/portfolio/showcases/web/jandup-home_qpqjfz.png",
       "https://res.cloudinary.com/jandup/image/upload/v1585552337/portfolio/showcases/web/jandup-modal_twypnc.png",
       "https://res.cloudinary.com/jandup/image/upload/v1585552322/portfolio/showcases/web/jandup-payment-method_znjxmm.png"
+    ]
+  },
+  {
+    "apps": [
+      {
+        "slug": "skinder",
+        "title": "Skinder",
+        "subtitle": "Your Perfect snowbud",
+        "storeInfo": [
+          {
+            "platform": "ios",
+            "url": "https://apps.apple.com/us/app/skinder-your-perfect-snowbud/id1449404012"
+          }
+        ]
+      }
+    ],
+    "technologies": ["react-native", "expo", "adonis", "javascript", "mysql"],
+    "images": [
+      "https://res.cloudinary.com/jandup/image/upload/v1585625006/portfolio/showcases/app/skinder_ve62b2.png"
+    ]
+  },
+  {
+    "apps": [
+      {
+        "slug": "geored",
+        "title": "GeoRed",
+        "subtitle": "Informacion de colegios",
+        "storeInfo": [{ "platform": "android", "url": "" }]
+      }
+    ],
+    "technologies": [
+      "react-native",
+      "expo",
+      "adonis",
+      "javascript",
+      "react",
+      "mysql"
+    ],
+    "images": [
+      "https://res.cloudinary.com/jandup/image/upload/v1585625006/portfolio/showcases/app/geored_eycbim.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625190/portfolio/showcases/web/geored-activities-list_iwffps.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625191/portfolio/showcases/web/geored-users_hauion.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625191/portfolio/showcases/web/geored-login_nsjn53.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625190/portfolio/showcases/web/geored-activity-details_i9nali.png"
+    ]
+  },
+  {
+    "apps": [
+      {
+        "slug": "ecuantena",
+        "title": "Radio Ecuantena",
+        "subtitle": "La Radio de la Familia - 1.030 AM",
+        "storeInfo": [
+          {
+            "platform": "android",
+            "url": "https://play.google.com/store/apps/details?id=com.ecuantena"
+          },
+          {
+            "platform": "ios",
+            "url": "https://itunes.apple.com/us/app/radio-ecuantena-1-030-am/id1465537473?l=es&ls=1&mt=8"
+          }
+        ]
+      }
+    ],
+    "technologies": ["react-native", "expo", "javascript"],
+    "images": [
+      "https://res.cloudinary.com/jandup/image/upload/v1585625006/portfolio/showcases/app/ecuantena_ckuv4p.png"
     ]
   }
 ]

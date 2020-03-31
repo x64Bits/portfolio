@@ -11,13 +11,17 @@ interface StoreInfo {
   url: string;
 }
 
-interface ProjectProps {
+interface App {
   slug: string;
   title: string;
   subtitle: string;
+  storeInfo: StoreInfo[];
+}
+
+interface ProjectProps {
   technologies: string[];
   images: string[];
-  storeInfo: StoreInfo[];
+  apps: App[];
 }
 
 interface DataProject {
@@ -36,27 +40,37 @@ const Projects: React.FC<DataProject> = ({ dataProject }: DataProject) => {
   //   });
   // });
   return (
-    <div className="project-container">
+    <div className="project-container px-8">
       <div>
         <Carousel
-          infinite
+          infinite={false}
+          draggable={dataProject.images.length !== 1}
           arrows
           addArrowClickHandler
+          dots
           arrowLeft={
-            <MdChevronLeft
-              name="angle-double-left"
-              className={`${
-                toggleModeSave ? "text-white" : "text-black"
-              } text-5xl carousel-arrow`}
-            />
+            dataProject.images.length !== 1 ? (
+              <MdChevronLeft
+                name="angle-double-left"
+                className={`${
+                  toggleModeSave ? "text-white" : "text-black"
+                } text-5xl carousel-arrow`}
+              />
+            ) : (
+              <div />
+            )
           }
           arrowRight={
-            <MdChevronRight
-              name="angle-double-right"
-              className={`${
-                toggleModeSave ? "text-white" : "text-black"
-              } text-5xl carousel-arrow`}
-            />
+            dataProject.images.length !== 1 ? (
+              <MdChevronRight
+                name="angle-double-right"
+                className={`${
+                  toggleModeSave ? "text-white" : "text-black"
+                } text-5xl carousel-arrow`}
+              />
+            ) : (
+              <div />
+            )
           }
         >
           {dataProject.images.map((photo: string, index: number) => (
@@ -71,36 +85,44 @@ const Projects: React.FC<DataProject> = ({ dataProject }: DataProject) => {
         </Carousel>
       </div>
       <div className="flex flex-1 flex-col">
-        <div className="flex py-8 w-full flex-row justify-center project-container">
-          <div className="flex justify-center relative">
-            <div className="shadow-app-icon-container">
-              <AppIcon
-                appSlug={dataProject.slug}
-                classes="object-contain app-icon shadow-app-icon"
-              />
+        {dataProject.apps.map((app, index) => (
+          <div
+            key={app.slug}
+            className="flex py-8 w-full flex-row justify-center app-container"
+          >
+            <div className="flex justify-center relative h-full self-center">
+              <div className="shadow-app-icon-container">
+                <AppIcon
+                  appSlug={app.slug}
+                  classes="object-contain app-icon shadow-app-icon"
+                />
+              </div>
+              <div
+                className={`app-icon-container ${
+                  app.slug === "jandup-operator" || app.slug === "ecuantena"
+                    ? "app-icon-border"
+                    : ""
+                }`}
+              >
+                <AppIcon appSlug={app.slug} classes="object-contain app-icon" />
+              </div>
             </div>
-            <div className="app-icon-container">
-              <AppIcon
-                appSlug={dataProject.slug}
-                classes="object-contain app-icon"
-              />
+            <div className="flex px-6 justify-center flex-col meta-info-container">
+              <h2 className="font-semibold text-xl py-1">{app.title}</h2>
+              <span className="font-light text-lg">{app.subtitle}</span>
+            </div>
+            <div className="flex justify-center platform-container flex-col">
+              {app.storeInfo.map((info, index) => (
+                <PlatformIcon
+                  key={index}
+                  platform={info.platform}
+                  url={info.url}
+                  classes="object-contain py-2"
+                />
+              ))}
             </div>
           </div>
-          <div className="flex px-6 justify-center flex-col meta-info-container">
-            <h2 className="font-semibold text-xl py-1">{dataProject.title}</h2>
-            <span className="font-light text-lg">{dataProject.subtitle}</span>
-          </div>
-          <div className="flex justify-center platform-container">
-            {dataProject.storeInfo.map((info, index) => (
-              <PlatformIcon
-                key={index}
-                platform={info.platform}
-                url={info.url}
-                classes="object-contain"
-              />
-            ))}
-          </div>
-        </div>
+        ))}
         <div className="flex flex-col justify-center">
           <h4 className="py-4 text-center font-semibold">Technologies</h4>
           <div className="flex flex-row py-6 justify-center flex-wrap">

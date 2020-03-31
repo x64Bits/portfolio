@@ -10940,10 +10940,19 @@ video {
   fill: #FFF !important;
 }
 
+.dark-container .BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+  background-color: #fff;
+  transition: all 0.25s linear;
+}
+
 .light-container .social-icon g {
   transition: all 0.25s linear;
   filter: invert(1);
   fill: #000;
+}
+
+.light-container .app-icon-border {
+  border: 1px solid #ebebeb;
 }
 
 .dark-container .social-icon g {
