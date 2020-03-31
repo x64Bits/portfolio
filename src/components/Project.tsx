@@ -47,7 +47,7 @@ const Projects: React.FC<DataProject> = ({ dataProject }: DataProject) => {
           draggable={dataProject.images.length !== 1}
           arrows
           addArrowClickHandler
-          dots
+          dots={dataProject.images.length !== 1}
           arrowLeft={
             dataProject.images.length !== 1 ? (
               <MdChevronLeft
