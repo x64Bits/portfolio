@@ -27,6 +27,7 @@
 .dark-container .BrainhubCarousel__dots .BrainhubCarousel__dot:before {
   background-color: #fff;
   transition: all 0.25s linear;
+  margin-top: 1rem;
 }
 
 .light-container .social-icon g {

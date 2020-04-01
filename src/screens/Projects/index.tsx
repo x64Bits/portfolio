@@ -5,8 +5,10 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import "./styles.css";
 import projectsData from "../../data/projects.json";
 import Project from "../../components/Project";
+import { MdArrowBack } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-const SecondPage: React.FC = () => {
+const Projects: React.FC = () => {
   const toggleModeSave = useToggleModeSave();
   return (
     <div
@@ -16,6 +18,14 @@ const SecondPage: React.FC = () => {
       }`}
     >
       <SEO title="Projects" />
+      <div className="action-bar">
+        <Link to="/">
+          <div className="back-arrow-container">
+            <MdArrowBack className="back-arrow" />
+            <span>Go back!</span>
+          </div>
+        </Link>
+      </div>
       {projectsData.map((project, index) => (
         <Project key={index} dataProject={project} />
       ))}
@@ -23,4 +33,4 @@ const SecondPage: React.FC = () => {
   );
 };
 
-export default SecondPage;
+export default Projects;

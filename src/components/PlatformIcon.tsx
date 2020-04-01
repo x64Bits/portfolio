@@ -26,7 +26,7 @@ const PlatformIcon: React.FC<Props> = ({ platform, classes, url }) => {
   return (
     <a
       href={url === "" ? "#" : url}
-      target={url === "" ? "" : "_self"}
+      target={url === "" ? "_self" : "_blank"}
       rel="noopener noreferrer"
       className="flex self-center store-icon-container"
       style={{

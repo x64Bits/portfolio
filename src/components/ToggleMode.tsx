@@ -7,9 +7,10 @@ let toggleAnimation: any = null;
 
 interface Props {
   toggleParent: Function;
+  classes?: string;
 }
 
-const ToggleMode: FC<Props> = ({ toggleParent }) => {
+const ToggleMode: FC<Props> = ({ toggleParent, classes }) => {
   const toggleModeSave = useToggleModeSave();
   const [localMode, toggleLocalMode] = useState(toggleModeSave);
 
@@ -45,7 +46,7 @@ const ToggleMode: FC<Props> = ({ toggleParent }) => {
   return (
     <div
       onClick={() => handleToggleMode()}
-      className="flex px-8 justify-end py-6 self-end"
+      className={classes}
       style={{ height: "fit-content", width: "fit-content" }}
     >
       <div id="anim" />

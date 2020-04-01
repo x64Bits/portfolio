@@ -21,7 +21,7 @@ const IndexPage: FC = () => {
           darkMode ? "dark-container" : "light-container"
         }`}
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center preview-container">
           <div className="h-screen side-preview-container">
             <img
               src={sidePreview}
@@ -37,16 +37,22 @@ const IndexPage: FC = () => {
           </div>
         </div>
         <div className="flex toggle-container flex-col max-h-screen">
-          <ToggleMode toggleParent={() => toggleDarkMode(!darkMode)} />
-          <div className="flex justify-center flex-col flex-1">
+          <ToggleMode
+            classes="flex px-8 justify-end py-6 self-end"
+            toggleParent={() => toggleDarkMode(!darkMode)}
+          />
+          <div className="flex justify-center flex-col flex-1 info-container">
             <div className="avatar-container py-4">
               <img src={avatar} alt="Me :)" className="avatar" />
             </div>
             <p className="mx-8 text-right description my-4 pl-16">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
-              delectus, quae non, iste magnam aut labore vero quam quos
-              mollitia, ab obcaecati pariatur fuga. Fugit ad eligendi voluptatum
-              error quod?
+              Hi!{" "}
+              <span role="img" aria-label="Greetings">
+                👋
+              </span>{" "}
+              my name is <b>Ignacio Zsabo</b> I am a 24-year-old software
+              developer with more than 5 years of experience in the creation of
+              mobile applications and web platforms.
             </p>
             <div className="flex flex-row justify-end px-8 social-icon-container">
               <a

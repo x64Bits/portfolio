@@ -6,6 +6,10 @@
   background-color: #fff;
 }
 
+.dark-container .social-icon:hover {
+  box-shadow: 0px 0px 7px 0px rgba(37, 117, 252, 0.4);
+}
+
 .home-container {
   min-width: 100%;
   min-height: 100%;
@@ -89,7 +93,7 @@
 }
 
 .description {
-  font-size: 2.5vh;
+  font-size: 3.2vh;
 }
 
 .social-icon {
@@ -137,5 +141,9 @@
     padding-right: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .preview-container {
+    margin-top: 6rem;
   }
 }
