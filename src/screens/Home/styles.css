@@ -80,12 +80,8 @@
   transition: all 0.25s linear;
 }
 
-.avatar-container {
-  align-self: center;
-}
-
 .avatar {
-  height: 40vh;
+  height: 50vh;
 }
 
 .toggle-container {
@@ -145,5 +141,10 @@
 
   .preview-container {
     margin-top: 6rem;
+  }
+
+  .avatar-container {
+    align-self: center;
+    margin-right: 0;
   }
 }

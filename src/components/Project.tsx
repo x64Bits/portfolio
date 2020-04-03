@@ -5,6 +5,8 @@ import useToggleModeSave from "../hooks/useToggleModeSave";
 import TechIcon from "../components/TechIcon";
 import AppIcon from "../components/AppIcon";
 import PlatformIcon from "../components/PlatformIcon";
+//@ts-ignore
+import Slide from "react-reveal/Slide";
 
 interface StoreInfo {
   platform: string;
@@ -29,22 +31,10 @@ interface DataProject {
 }
 const Projects: React.FC<DataProject> = ({ dataProject }: DataProject) => {
   const toggleModeSave = useToggleModeSave();
-  // useEffect(() => {
-  //   const div = document.getElementById("test-container");
-  //   div?.addEventListener("scroll", e => {
-  //     let element: any = e.srcElement;
-  //     let cHeight: any = element.clientHeight;
-  //     if (element?.scrollTop === element?.scrollHeight - cHeight) {
-  //       console.warn("llego al final");
-  //     }
-  //   });
-  // });
   return (
     <div className="project-container px-8">
       <div>
         <Carousel
-          infinite={false}
-          draggable={dataProject.images.length !== 1}
           arrows
           addArrowClickHandler
           dots={dataProject.images.length !== 1}
@@ -79,49 +69,54 @@ const Projects: React.FC<DataProject> = ({ dataProject }: DataProject) => {
               loading={index === 0 ? "eager" : "lazy"}
               src={photo}
               className="w-full sm:h-full object-contain carousel-item"
-              alt="nothing"
+              alt="Preview of carousel"
             />
           ))}
         </Carousel>
       </div>
       <div className="flex flex-1 flex-col">
         {dataProject.apps.map((app, index) => (
-          <div
-            key={app.slug}
-            className="flex py-8 w-full flex-row justify-center app-container"
-          >
-            <div className="flex justify-center relative h-full self-center">
-              <div className="shadow-app-icon-container">
-                <AppIcon
-                  appSlug={app.slug}
-                  classes="object-contain app-icon shadow-app-icon"
-                />
+          <Slide bottom>
+            <div
+              key={app.slug}
+              className="flex py-8 w-full flex-row justify-center app-container"
+            >
+              <div className="flex justify-center relative h-full self-center">
+                <div className="shadow-app-icon-container">
+                  <AppIcon
+                    appSlug={app.slug}
+                    classes="object-contain app-icon shadow-app-icon"
+                  />
+                </div>
+                <div
+                  className={`app-icon-container ${
+                    app.slug === "jandup-operator" || app.slug === "ecuantena"
+                      ? "app-icon-border"
+                      : ""
+                  }`}
+                >
+                  <AppIcon
+                    appSlug={app.slug}
+                    classes="object-contain app-icon"
+                  />
+                </div>
               </div>
-              <div
-                className={`app-icon-container ${
-                  app.slug === "jandup-operator" || app.slug === "ecuantena"
-                    ? "app-icon-border"
-                    : ""
-                }`}
-              >
-                <AppIcon appSlug={app.slug} classes="object-contain app-icon" />
+              <div className="flex px-6 justify-center flex-col meta-info-container">
+                <h2 className="font-semibold text-xl py-1">{app.title}</h2>
+                <span className="font-light text-lg">{app.subtitle}</span>
+              </div>
+              <div className="flex justify-center platform-container flex-col">
+                {app.storeInfo.map((info, index) => (
+                  <PlatformIcon
+                    key={index}
+                    platform={info.platform}
+                    url={info.url}
+                    classes="object-contain py-2"
+                  />
+                ))}
               </div>
             </div>
-            <div className="flex px-6 justify-center flex-col meta-info-container">
-              <h2 className="font-semibold text-xl py-1">{app.title}</h2>
-              <span className="font-light text-lg">{app.subtitle}</span>
-            </div>
-            <div className="flex justify-center platform-container flex-col">
-              {app.storeInfo.map((info, index) => (
-                <PlatformIcon
-                  key={index}
-                  platform={info.platform}
-                  url={info.url}
-                  classes="object-contain py-2"
-                />
-              ))}
-            </div>
-          </div>
+          </Slide>
         ))}
         <div className="flex flex-col justify-center">
           <h4 className="py-4 text-center font-semibold">Technologies</h4>

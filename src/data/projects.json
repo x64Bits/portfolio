@@ -26,10 +26,10 @@
     "images": [
       "https://res.cloudinary.com/jandup/image/upload/v1585625007/portfolio/showcases/app/jandup_gonogx.png",
       "https://res.cloudinary.com/jandup/image/upload/v1585552346/portfolio/showcases/web/jandup-signup_l8hdzg.png",
-      "https://res.cloudinary.com/jandup/image/upload/v1585552342/portfolio/showcases/web/jandup-admin-categories_ltcimj.png",
-      "https://res.cloudinary.com/jandup/image/upload/v1585552337/portfolio/showcases/web/jandup-home_qpqjfz.png",
-      "https://res.cloudinary.com/jandup/image/upload/v1585552337/portfolio/showcases/web/jandup-modal_twypnc.png",
-      "https://res.cloudinary.com/jandup/image/upload/v1585552322/portfolio/showcases/web/jandup-payment-method_znjxmm.png"
+      "https://res.cloudinary.com/jandup/image/upload/v1585625194/portfolio/showcases/web/jandup-admin-categories_bn4avv.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625194/portfolio/showcases/web/jandup-home_yav1bq.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625194/portfolio/showcases/web/jandup-modal_lehnnz.png",
+      "https://res.cloudinary.com/jandup/image/upload/v1585625194/portfolio/showcases/web/jandup-payment-method_myyvyo.png"
     ]
   },
   {
@@ -56,7 +56,7 @@
       {
         "slug": "geored",
         "title": "GeoRed",
-        "subtitle": "Informacion de colegios",
+        "subtitle": "Manage visits to schools.",
         "storeInfo": [{ "platform": "android", "url": "" }]
       }
     ],

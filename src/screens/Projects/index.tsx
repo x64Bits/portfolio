@@ -7,8 +7,13 @@ import projectsData from "../../data/projects.json";
 import Project from "../../components/Project";
 import { MdArrowBack } from "react-icons/md";
 import { Link } from "react-router-dom";
+//@ts-ignore
+import Fade from "react-reveal/Fade";
 
 const Projects: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const toggleModeSave = useToggleModeSave();
   return (
     <div
@@ -27,7 +32,9 @@ const Projects: React.FC = () => {
         </Link>
       </div>
       {projectsData.map((project, index) => (
-        <Project key={index} dataProject={project} />
+        <Fade bottom>
+          <Project key={index} dataProject={project} />
+        </Fade>
       ))}
     </div>
   );

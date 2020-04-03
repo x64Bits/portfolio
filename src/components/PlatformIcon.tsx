@@ -18,10 +18,14 @@ const PlatformIcon: React.FC<Props> = ({ platform, classes, url }) => {
         setUri(`${entryPoint}/appstore_kmf7un.png`);
         break;
       case "android":
-        setUri(`${entryPoint}/playstore_w96tp9.png`);
+        if (url === "") {
+          setUri(`${entryPoint}/playstore-coming_glwuhu`);
+        } else {
+          setUri(`${entryPoint}/playstore_w96tp9.png`);
+        }
         break;
     }
-  }, [platform]);
+  }, [platform, url]);
 
   return (
     <a
@@ -37,7 +41,7 @@ const PlatformIcon: React.FC<Props> = ({ platform, classes, url }) => {
         className={classes}
         src={uri}
         alt={`${platform}-icon`}
-        style={{ filter: url === "" ? "grayscale(100%)" : "unset" }}
+        // style={{ filter: url === "" ? "grayscale(100%)" : "unset" }}
       />
     </a>
   );
