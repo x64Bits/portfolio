@@ -38,7 +38,7 @@ const IndexPage: FC = () => {
             <div className="portfolio-button-container overflow-visible">
               <div className="portfolio-button-shadow" />
               <Link to="/projects" className="portfolio-button">
-                PROJECTS
+                <h2>PROJECTS</h2>
               </Link>
             </div>
           </div>
