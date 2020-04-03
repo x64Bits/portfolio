@@ -49,8 +49,8 @@ const IndexPage: FC = () => {
             toggleParent={() => toggleDarkMode(!darkMode)}
           />
           <div className="flex justify-center flex-col flex-1 info-container">
-            <div className="avatar-container py-4 self-end mr-12 sm:self-center">
-              <img src={avatar} alt="Me :)" className="avatar" />
+            <div className="avatar-container py-4 self-end mr-12">
+              <img src={avatar} alt="Me :)" className="avatar object-contain" />
             </div>
             <p className="mx-8 text-right description my-4 pl-16">
               Hi!{" "}

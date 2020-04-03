@@ -81,7 +81,7 @@
 }
 
 .avatar {
-  height: 50vh;
+  height: 40vh;
 }
 
 .toggle-container {
@@ -135,7 +135,7 @@
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
   }
 
@@ -146,5 +146,8 @@
   .avatar-container {
     align-self: center;
     margin-right: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
   }
 }

@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
         </Link>
       </div>
       {projectsData.map((project, index) => (
-        <Fade bottom>
+        <Fade duration={850}>
           <Project key={index} dataProject={project} />
         </Fade>
       ))}

@@ -9,6 +9,7 @@ interface Props {
   toggleParent: Function;
   classes?: string;
 }
+let manifest: any = document.getElementById("manifest");
 
 const ToggleMode: FC<Props> = ({ toggleParent, classes }) => {
   const toggleModeSave = useToggleModeSave();
@@ -22,10 +23,13 @@ const ToggleMode: FC<Props> = ({ toggleParent, classes }) => {
       autoplay: toggleModeSave,
       animationData: toggleFile
     });
+
     if (toggleModeSave) {
       document.body.className = "dark-body";
+      manifest.href = "/manifest-dark.json";
     } else {
       document.body.className = "light-body";
+      manifest.href = "/manifest.json";
     }
   }, [toggleModeSave]);
 
@@ -36,10 +40,12 @@ const ToggleMode: FC<Props> = ({ toggleParent, classes }) => {
       toggleAnimation.setDirection(-1);
       toggleAnimation.play();
       document.body.className = "light-body";
+      manifest.href = "/manifest.json";
     } else {
       toggleAnimation.setDirection(1);
       toggleAnimation.play();
       document.body.className = "dark-body";
+      manifest.href = "/manifest-dark.json";
     }
     toggleLocalMode(!localMode);
   };
