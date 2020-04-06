@@ -1,6 +1,6 @@
 # Personal work portfolios created with React.
 
-[![N|Solid](https://res.cloudinary.com/jandup/image/upload/v1586204137/portfolio/logo192-light_kamdxk.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://res.cloudinary.com/jandup/image/upload/v1586204622/portfolio/logo192-dark_kugwp7.png)](https://nodesource.com/products/nsolid)
 
 Website link: https://zsabo.netlify.com
 
