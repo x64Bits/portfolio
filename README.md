@@ -1,6 +1,6 @@
 # Personal work portfolios created with React.
 
-[![N|Solid](https://res.cloudinary.com/jandup/image/upload/v1586204622/portfolio/logo192-dark_kugwp7.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://res.cloudinary.com/jandup/image/upload/v1586204622/portfolio/logo192-dark_kugwp7.png)](https://zsabo.netlify.com/)
 
 Website link: https://zsabo.netlify.com
 
@@ -26,4 +26,4 @@ Website link: https://zsabo.netlify.com
 
 ## Preview
 
-[![N|Solid](https://res.cloudinary.com/jandup/image/upload/v1586204311/portfolio/portfolio-preview_khkeru.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://res.cloudinary.com/jandup/image/upload/v1586204311/portfolio/portfolio-preview_khkeru.png)](https://zsabo.netlify.com/)
