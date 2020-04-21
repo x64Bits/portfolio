@@ -12,3 +12,6 @@ window.onload = function () {
     loader.style.display = "none"
   }, 650);
 };
+
+// TODO: 
+// Move dynamically manifest declaration to this file
