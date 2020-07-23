@@ -84,7 +84,7 @@ const IndexPage: FC = () => {
                   />
                 </a>
                 <a
-                  href="https://twitter.com/SpaceForgerDev"
+                  href="https://twitter.com/x64_Bits"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
