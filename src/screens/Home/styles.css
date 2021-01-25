@@ -37,8 +37,9 @@
 
 .portfolio-button {
   position: relative;
-  background-image: linear-gradient(to right, #2575fc, #6a11cb);
-  color: #fff;
+  background-color: #fff;
+  /* background-image: linear-gradient(to right, #2575fc, #6a11cb); */
+  color: #000;
   padding: 2.5rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
