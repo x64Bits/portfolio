@@ -35,12 +35,12 @@ const IndexPage: FC = () => {
                 alt="Preview of Projects"
               />
             </div>
-            <div className="portfolio-button-container overflow-visible">
+            {/* <div className="portfolio-button-container overflow-visible">
               <div className="portfolio-button-shadow" />
               <Link to="/projects" className="portfolio-button">
                 <h2>PROJECTS</h2>
               </Link>
-            </div>
+            </div> */}
           </div>
         </Fade>
         <div className="flex toggle-container flex-col max-h-screen">
